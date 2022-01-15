@@ -1,7 +1,24 @@
-name: GitHub Actions Demo
-on: [push]
+name: Lint check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
-  Explore-GitHub-Actions:
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-      make lint
+    - uses: actions/checkout@v2
+    
+    - name: configure
+      run: ./configure
+      
+    - name: Build
+      run: make build
+      
+    - name: Run lint check
+      run: make lint
