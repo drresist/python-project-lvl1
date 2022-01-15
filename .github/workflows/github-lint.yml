@@ -1,5 +1,4 @@
-name: Lint check
-
+name: Poetry + Make linter check
 on:
   push:
     branches: [ main ]
@@ -13,12 +12,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
     - name: Install Poetry
       uses: snok/install-poetry@v1
-     
-    - name: Build
+    - name: Build with poetry
       run: make build
-      
-    - name: Run lint check
+    - name: Check with flake8
       run: make lint
