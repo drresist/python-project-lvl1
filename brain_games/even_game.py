@@ -1,11 +1,12 @@
 """Even game logic."""
 
 import random
+from typing import Union
 import prompt
 from brain_games.cli import welcome_user
 
 
-def check_answer(user_answer: str | None, right_answer: str) -> str:
+def check_answer(user_answer: Union[str, None], right_answer: str) -> str:
     """Check if user right. Return 'yes' or 'no'."""
     if (user_answer == "yes" and right_answer == "yes") or (
         user_answer == "no" and right_answer == "no"
