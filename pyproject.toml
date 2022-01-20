@@ -1,10 +1,13 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Brain games collection"
 authors = ["Maksim Fesenko <drresist@gmail.com>"]
 packages = [
          { include = "brain_games" },
+]
+classifiers = [
+    "Topic :: Games/Entertainment"
 ]
 
 [tool.poetry.scripts]

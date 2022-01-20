@@ -15,5 +15,5 @@ def welcome_user() -> Union[str, None]:
     """
     print('Welcome to the Brain Games!')
     username: Union[str, None] = prompt.string('May I have your name? ')
-    print('Hello {0}'.format(username))
+    print('Hello, {0}'.format(username))
     return username

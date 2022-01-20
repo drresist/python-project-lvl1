@@ -7,12 +7,15 @@
 [![wemake-python-styleguide](https://github.com/drresist/python-project-lvl1/actions/workflows/github-lint.yml/badge.svg)](https://github.com/drresist/python-project-lvl1/actions/workflows/github-lint.yml)
 
 ## Installation
+With poetry and Make
 ```shell
 make install
 make build
 make package-install
 ```
 [![asciicast](https://asciinema.org/a/BuyrwtFSnGsS62Xk2nOcnl04m.svg)](https://asciinema.org/a/BuyrwtFSnGsS62Xk2nOcnl04m)
+With PyPi
+
 
 ## Usage example
 ### Even game
