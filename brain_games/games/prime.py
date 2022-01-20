@@ -31,4 +31,5 @@ def prime_generator() -> tuple:
     """
     question_number: int = random.randint(1, 100)
     answer: str = is_prime(question_number)
-    return question_number, answer, 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    task: str = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    return question_number, answer, task
