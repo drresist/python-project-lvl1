@@ -66,6 +66,6 @@ def start_game(gamename: str = 'even', username: Union[str, None] = '') -> None:
             question, answer, task = func()
             continue
         if user_answer != answer:
-            print("'{0}' is wrong answer ;(. Correct answer was '{1}'.".format(user_answer, answer))
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{answer}'.")
             print("Let's try again, {0}!".format(username))
             break
