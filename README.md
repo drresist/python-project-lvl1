@@ -25,3 +25,10 @@
 [![asciicast](https://asciinema.org/a/cRtoCbZbhCNYqi3ux5A39k22Q.svg)](https://asciinema.org/a/cRtoCbZbhCNYqi3ux5A39k22Q)
 #### Lose condition
 [![asciicast](https://asciinema.org/a/SVjwbabD1LW1Q4qgdarshUw4A.svg)](https://asciinema.org/a/SVjwbabD1LW1Q4qgdarshUw4A)
+
+
+### Arithmetic progression game
+#### Win condition
+[![asciicast](https://asciinema.org/a/WSgRwwGAOiICrTgTM6sM5uOs6.svg)](https://asciinema.org/a/WSgRwwGAOiICrTgTM6sM5uOs6)
+#### Lose condition
+[![asciicast](https://asciinema.org/a/ixIvr4XdBuTsnuny7hbWsuJGY.svg)](https://asciinema.org/a/ixIvr4XdBuTsnuny7hbWsuJGY)
