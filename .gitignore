@@ -11,3 +11,6 @@ htmlcov
 __pycache__
 .venv
 dist/
+.mypy_cache
+.ipynb_*
+
