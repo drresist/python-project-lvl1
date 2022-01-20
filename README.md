@@ -8,13 +8,13 @@
 
 
 ### Even game 
-* Win condition
+#### Win condition
 [![asciicast](https://asciinema.org/a/ROep5Dv8oNfJ3TgmYBH9O7kDd.svg)](https://asciinema.org/a/ROep5Dv8oNfJ3TgmYBH9O7kDd)
-* Lose condition
+#### Lose condition
 [![asciicast](https://asciinema.org/a/CZraZmKuktRuQr2EBzBgQBk8z.svg)](https://asciinema.org/a/CZraZmKuktRuQr2EBzBgQBk8z)
 
 ### Calc game
-* Win condition
+#### Win condition
 [![asciicast](https://asciinema.org/a/KSXlJZMWfevBzPtnWbzbnzpLA.svg)](https://asciinema.org/a/KSXlJZMWfevBzPtnWbzbnzpLA)
-* Lose condition
+#### Lose condition
 [![asciicast](https://asciinema.org/a/Fu8zqeVga86wBDrZmRlCEYTBA.svg)](https://asciinema.org/a/Fu8zqeVga86wBDrZmRlCEYTBA)
