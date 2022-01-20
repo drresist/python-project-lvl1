@@ -51,9 +51,6 @@ def start_game(gamename: str = 'even', username: Union[str, None] = '') -> None:
         gamename (str): what game will be started
         username (Union[str,None]): user name
     """
-    task: str = ''
-    answer: str = ''
-    question: str = ''
     win_counter: int = 0
     func = choose_game(gamename)
     question, answer, task = func()
@@ -70,4 +67,5 @@ def start_game(gamename: str = 'even', username: Union[str, None] = '') -> None:
             continue
         if user_answer != answer:
             print("'{0}' is wrong answer ;(. Correct answer was '{1}'.".format(user_answer, answer))
+            print("Let's try again, {0}".format(username))
             break
