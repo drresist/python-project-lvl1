@@ -3,7 +3,7 @@
 from typing import Union
 
 from brain_games.cli import welcome_user
-from brain_games.game import start_game
+from brain_games.games.game import start_game
 
 
 def main() -> None:

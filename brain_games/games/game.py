@@ -1,14 +1,15 @@
 """Template game logic."""
 
-from typing import Callable, Union
+from typing import Union
 
-from brain_games.calc import calc_expression_generator
-from brain_games.even import even_variants_generator
-from brain_games.gcd import gcd_generator
-from brain_games.progression import progression_generator
+from brain_games.games.calc import calc_expression_generator
+from brain_games.games.even import even_variants_generator
+from brain_games.games.gcd import gcd_generator
+from brain_games.games.prime import prime_generator
+from brain_games.games.progression import progression_generator
 
 
-def choose_game(gamename: str) -> Callable:
+def choose_game(gamename: str) -> callable:
     """Choose game using gamename.
 
     Args:
@@ -17,18 +18,14 @@ def choose_game(gamename: str) -> Callable:
     Returns:
         return generator function
     """
-    if gamename == 'even':
-        func = even_variants_generator
-    elif gamename == 'calc':
-        func = calc_expression_generator
-    elif gamename == 'gcd':
-        func = gcd_generator
-    elif gamename == 'progression':
-        func = progression_generator
-    else:
-        func = even_variants_generator
-
-    return func
+    games = {
+        'even': even_variants_generator,
+        'calc': calc_expression_generator,
+        'gcd': gcd_generator,
+        'progression': progression_generator,
+        'prime': prime_generator,
+    }
+    return games[gamename]
 
 
 def win_condition(counter: int, username: Union[str, None]) -> bool:

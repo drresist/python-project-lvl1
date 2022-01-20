@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Main moudle for GCD game."""
+"""Main module for Prime game."""
 from typing import Union
 
 from brain_games.cli import welcome_user
@@ -7,9 +7,9 @@ from brain_games.games.game import start_game
 
 
 def main() -> None:
-    """Run gcd game."""
+    """Run Prime game."""
     username: Union[str, None] = welcome_user()
-    start_game('gcd', username)
+    start_game('prime', username)
 
 
 if __name__ == '__main__':
