@@ -1,47 +1,71 @@
 """Template game logic."""
 
 
-from typing import Union
+from typing import Callable, Union
 
 from brain_games.calc import calc_expression_generator
 from brain_games.even import even_variants_generator
 
 
-def start_game(gamename: str = "even", username: Union[str, None] = "") -> None:
-    """Start game.
+def choose_game(gamename: str) -> Callable:
+    """Choose game using gamename.
 
     Args:
-        gamename (str): what game will be started
-    Returns:
-    """
-    task: str = ""
-    answer: str = ""
-    question: str = ""
-    win_counter: int = 0
+        gamename (str): type of game
 
-    if gamename == "even":
+    Returns:
+        return generator function
+    """
+    if gamename == 'even':
         func = even_variants_generator
-    elif gamename == "calc":
+    elif gamename == 'calc':
         func = calc_expression_generator
     else:
         func = even_variants_generator
+
+    return func
+
+
+def win_condition(counter: int, username: Union[str, None]) -> bool:
+    """Check win condition.
+
+    Args:
+        counter (int): count rounds to win. Strict 3 = win
+        username (str): username for congratulations :)
+
+    Returns:
+        win or not
+    """
+    if counter == 3:
+        print('Congratulations, {0}!'.format(username))
+        return True
+    return False
+
+
+def start_game(gamename: str = 'even', username: Union[str, None] = '') -> None:
+    """Run basic game logic accross all games.
+
+    Args:
+        gamename (str): what game will be started
+        username (Union[str,None]): user name
+    """
+    task: str = ''
+    answer: str = ''
+    question: str = ''
+    win_counter: int = 0
+    func = choose_game(gamename)
     question, answer, task = func()
     print(task)
     while True:
-        if win_counter == 3:
-            print("Congratulations, {0}!".format(username))
+        if win_condition(win_counter, username):
             break
-        print("Question: {0}".format(question))
-        user_answer = input("Your answer: ")
+        print('Question: {0}'.format(question))
+        user_answer = input('Your answer: ')
         if user_answer == answer:
-            print("Correct!")
+            print('Correct!')
             win_counter += 1
             question, answer, task = func()
             continue
         if user_answer != answer:
-            print(
-                "'{0}' is wrong answer ;(. Correct answer was '{1}'.".format(
-                    user_answer, answer
-                )
-            )
+            print("'{0}' is wrong answer ;(. Correct answer was '{1}'.".format(user_answer, answer))
             break

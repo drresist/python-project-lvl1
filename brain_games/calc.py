@@ -3,7 +3,18 @@
 import random
 from datetime import datetime
 
-VARIANTS = ("*", "+", "-")
+VARIANTS = ('*', '+', '-')
+
+
+def setup_task() -> str:
+    """Return task message.
+
+    Args:
+
+    Returns:
+        return task text
+    """
+    return 'What is the result of the expression?'
 
 
 def calc_expression_generator() -> tuple:
@@ -18,13 +29,12 @@ def calc_expression_generator() -> tuple:
     first_number: int = random.randint(1, 100)
     second_number: int = random.randint(1, 100)
     action: str = random.choice(VARIANTS)
-    expression: str = "{0} {1} {2}".format(first_number, action, second_number)
-    task: str = "What is the result of the expression?"
+    expression: str = '{0} {1} {2}'.format(first_number, action, second_number)
     answer: int = 0
-    if action == "*":
+    if action == '*':
         answer = first_number * second_number
-    if action == "+":
+    if action == '+':
         answer = first_number + second_number
-    if action == "-":
+    if action == '-':
         answer = first_number - second_number
-    return (expression, str(answer), task)
+    return (expression, str(answer), setup_task())
