@@ -44,6 +44,16 @@ def win_condition(counter: int, username: Union[str, None]) -> bool:
     return False
 
 
+def wrong_answer(user_ans: str, answer: str) -> None:
+    """Print wrong answer message.
+
+    Args:
+        user_ans (str): user answer
+        answer (str): correct answer
+    """
+    print(f"'{user_ans}' is wrong answer ;(. Correct answer was '{answer}'.")
+
+
 def start_game(gamename: str = 'even', username: Union[str, None] = '') -> None:
     """Run basic game logic accross all games.
 
@@ -66,6 +76,6 @@ def start_game(gamename: str = 'even', username: Union[str, None] = '') -> None:
             question, answer, task = func()
             continue
         if user_answer != answer:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{answer}'.")
+            wrong_answer(user_answer, answer)
             print("Let's try again, {0}!".format(username))
             break
