@@ -18,3 +18,10 @@
 [![asciicast](https://asciinema.org/a/KSXlJZMWfevBzPtnWbzbnzpLA.svg)](https://asciinema.org/a/KSXlJZMWfevBzPtnWbzbnzpLA)
 #### Lose condition
 [![asciicast](https://asciinema.org/a/Fu8zqeVga86wBDrZmRlCEYTBA.svg)](https://asciinema.org/a/Fu8zqeVga86wBDrZmRlCEYTBA)
+
+
+### GCD game
+#### Win condition
+[![asciicast](https://asciinema.org/a/cRtoCbZbhCNYqi3ux5A39k22Q.svg)](https://asciinema.org/a/cRtoCbZbhCNYqi3ux5A39k22Q)
+#### Lose condition
+[![asciicast](https://asciinema.org/a/SVjwbabD1LW1Q4qgdarshUw4A.svg)](https://asciinema.org/a/SVjwbabD1LW1Q4qgdarshUw4A)
