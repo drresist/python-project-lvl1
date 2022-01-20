@@ -32,4 +32,4 @@ def even_variants_generator() -> tuple:
         answer = 'yes'
     if not is_even(random_number):
         answer = 'no'
-    return (random_number, answer, task)
+    return random_number, answer, task

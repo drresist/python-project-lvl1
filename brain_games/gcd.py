@@ -32,4 +32,4 @@ def gcd_generator() -> tuple:
     second_number: int = random.randint(1, 100)
     task: str = 'Find the greatest common divisor of given numbers.'
     answer: str = str(gcd(first_number, second_number))
-    return ('{0} {1}'.format(first_number, second_number), answer, task)
+    return '{0} {1}'.format(first_number, second_number), answer, task

@@ -1,11 +1,11 @@
 """Template game logic."""
 
-
 from typing import Callable, Union
 
 from brain_games.calc import calc_expression_generator
 from brain_games.even import even_variants_generator
 from brain_games.gcd import gcd_generator
+from brain_games.progression import progression_generator
 
 
 def choose_game(gamename: str) -> Callable:
@@ -23,6 +23,8 @@ def choose_game(gamename: str) -> Callable:
         func = calc_expression_generator
     elif gamename == 'gcd':
         func = gcd_generator
+    elif gamename == 'progression':
+        func = progression_generator
     else:
         func = even_variants_generator
 

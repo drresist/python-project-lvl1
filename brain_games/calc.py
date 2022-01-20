@@ -37,4 +37,4 @@ def calc_expression_generator() -> tuple:
         answer = first_number + second_number
     if action == '-':
         answer = first_number - second_number
-    return (expression, str(answer), setup_task())
+    return expression, str(answer), setup_task()
